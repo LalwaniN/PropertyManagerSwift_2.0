@@ -26,7 +26,7 @@ class PropertyDetailViewController: UIViewController , UICollectionViewDelegate,
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 1, alpha: 0.5)
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        
+        self.hideKeyboardWhenTappedAround()
 //
 //        if let url = URL(string: "tel://\(8573209769)"), UIApplication.shared.canOpenURL(url) {
 //            if #available(iOS 10, *) {

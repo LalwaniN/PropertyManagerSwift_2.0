@@ -26,7 +26,7 @@ class PropertyManagerHomeViewController: UIViewController {
         
         constraintForMenuView.constant = -175
         
-        
+        self.hideKeyboardWhenTappedAround()
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
         

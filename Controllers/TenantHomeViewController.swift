@@ -39,7 +39,7 @@ class TenantHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         getApartmentById()
         blurView.layer.cornerRadius = 15
         sideView.layer.shadowColor = UIColor.black.cgColor

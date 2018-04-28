@@ -810,7 +810,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/Tenant.swift"
-            timestampString = "546615370.03306"
+            timestampString = "546629780.138696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -826,7 +826,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/Tenant.swift"
-            timestampString = "546615370.033115"
+            timestampString = "546629780.138749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -873,24 +873,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controllers/bookApartmentViewController.swift"
-            timestampString = "546591614.2579319"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "submitDetailsBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Model/Tenant.swift"
-            timestampString = "546615370.033199"
+            timestampString = "546629780.1388201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -906,7 +890,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/Tenant.swift"
-            timestampString = "546615370.033239"
+            timestampString = "546629780.138858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -922,7 +906,7 @@
                   moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lalwani.n/Downloads/PropertyManagerSwift_backup/Model/Tenant.swift"
-                  timestampString = "546615312.372062"
+                  timestampString = "546629780.352916"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -937,7 +921,7 @@
                   moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lalwani.n/Downloads/PropertyManagerSwift_backup/Model/Tenant.swift"
-                  timestampString = "546615312.373246"
+                  timestampString = "546629780.354071"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -954,7 +938,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546615370.033276"
+            timestampString = "546629780.138895"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -970,7 +954,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546615370.0333149"
+            timestampString = "546629780.138936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -986,7 +970,7 @@
                   moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lalwani.n/Downloads/PropertyManagerSwift_backup/Controllers/TenantHomeViewController.swift"
-                  timestampString = "546615312.378333"
+                  timestampString = "546629780.359022"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
@@ -1001,7 +985,7 @@
                   moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lalwani.n/Downloads/PropertyManagerSwift_backup/Controllers/TenantHomeViewController.swift"
-                  timestampString = "546615312.379509"
+                  timestampString = "546629780.360286"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -1018,11 +1002,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/LoginViewController.swift"
-            timestampString = "546610209.768333"
+            timestampString = "546629780.138976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "loginBtnAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1034,7 +1018,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546615370.033371"
+            timestampString = "546629780.1390131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
@@ -1050,7 +1034,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546615370.03341"
+            timestampString = "546629780.1390491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -1066,7 +1050,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ChatUserListControllerViewController.swift"
-            timestampString = "546500346.10876"
+            timestampString = "546629780.1391079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -1082,11 +1066,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/RegisterViewController.swift"
-            timestampString = "546590710.02429"
+            timestampString = "546629780.139168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "507"
+            endingLineNumber = "507"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1098,11 +1082,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/RegisterViewController.swift"
-            timestampString = "546590710.024528"
+            timestampString = "546629780.139208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
+            startingLineNumber = "493"
+            endingLineNumber = "493"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1114,11 +1098,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/RegisterViewController.swift"
-            timestampString = "546590710.024714"
+            timestampString = "546629780.139244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "444"
-            endingLineNumber = "444"
+            startingLineNumber = "470"
+            endingLineNumber = "470"
             landmarkName = "registerAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1146,11 +1130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportIssuesViewController.swift"
-            timestampString = "546615370.033537"
+            timestampString = "546629780.139308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "reportIssueAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1162,7 +1146,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546615370.033583"
+            timestampString = "546629780.139357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
@@ -1178,7 +1162,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Model/MaintenanceRequest.swift"
-            timestampString = "546615370.033621"
+            timestampString = "546629780.139395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -1194,11 +1178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546615370.0336601"
+            timestampString = "546629780.1394351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1210,13 +1194,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546615370.033726"
+            timestampString = "546629780.139492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1226,43 +1210,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546615370.033796"
+            timestampString = "546629780.139545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "PropertyManagerViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546615370.033849"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "searchBar(_:textDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546615370.0338989"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "getAllApartments()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1274,12 +1226,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546615370.0339479"
+            timestampString = "546629780.1395971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "searchBar(_:textDidChange:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "filterTableView(ind:text:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/PropertyManagerViewController.swift"
+            timestampString = "546629780.1396461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "getAllApartments()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/PropertyManagerViewController.swift"
+            timestampString = "546629780.139693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "filterTableView(ind:text:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1290,7 +1274,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.033999"
+            timestampString = "546629780.139743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -1306,7 +1290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.034392"
+            timestampString = "546629780.139817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -1322,7 +1306,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.03469"
+            timestampString = "546629780.139886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -1338,7 +1322,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.0349801"
+            timestampString = "546629780.139954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -1354,7 +1338,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.035254"
+            timestampString = "546629780.140022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -1370,7 +1354,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PropertyManagerHomeViewController.swift"
-            timestampString = "546615370.0355099"
+            timestampString = "546629780.140092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
@@ -1386,7 +1370,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.035555"
+            timestampString = "546629780.140135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -1402,7 +1386,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.0358011"
+            timestampString = "546629780.140198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -1418,7 +1402,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.036049"
+            timestampString = "546629780.140262"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"
@@ -1434,7 +1418,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.036271"
+            timestampString = "546629780.140316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -1450,12 +1434,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/ReportedIssuesForPropManagerViewController.swift"
-            timestampString = "546615370.036481"
+            timestampString = "546629780.140366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "populateRequestsList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/AboutUsViewController.swift"
+            timestampString = "546629780.140408"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

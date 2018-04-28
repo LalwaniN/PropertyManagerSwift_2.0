@@ -26,7 +26,7 @@ class ReportedIssuesForPropManagerViewController: UIViewController , UITableView
         //print(pendingRequests?.count)
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
-        
+        self.hideKeyboardWhenTappedAround()
         let imageViewBackground = UIImageView(frame: CGRect(x:0, y:0, width:width, height:height))
         imageViewBackground.contentMode = .scaleAspectFit
         imageViewBackground.image = UIImage(named: "bcgd3")?.alpha(0.7)

@@ -22,8 +22,11 @@ class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
     override func viewDidAppear(_ animated: Bool) {
         getAllApartments()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
         tableView.dataSource = self
         tableView.estimatedRowHeight = 250
         tableView.rowHeight = UITableViewAutomaticDimension

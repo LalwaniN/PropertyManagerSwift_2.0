@@ -13,6 +13,18 @@ import FirebaseDatabase
 import CoreLocation
 import Foundation
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 extension UIImage {
     
     func alpha(_ value:CGFloat) -> UIImage {
@@ -80,9 +92,23 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate,UIImagePicke
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var navigationBar: UINavigationBar!
     
+    func textFieldShouldReturn(_ textField: UITextField)-> Bool{
+        emailTextField.resignFirstResponder()
+        confirmPasswordTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        managementNameTextField.resignFirstResponder()
+        postalCodeTextField.resignFirstResponder()
+        stateTextField.resignFirstResponder()
+        cityTextField.resignFirstResponder()
+        addressLine2TextField.resignFirstResponder()
+        addressLine1TextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
+        return true
+    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
         //Setting Delegates
