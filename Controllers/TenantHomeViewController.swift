@@ -39,7 +39,7 @@ class TenantHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         getApartmentById()
         blurView.layer.cornerRadius = 15
         sideView.layer.shadowColor = UIColor.black.cgColor
@@ -138,6 +138,7 @@ class TenantHomeViewController: UIViewController {
             let controller = segue.destination as! ReportIssuesViewController
             print(self.apartmentId!)
             controller.apartmentId = self.apartmentId!
+            controller.propertyManagerUserName = self.propertyManagerUserName
         }else if segue.identifier == "goToHotDealsSegue"{
             let controller = segue.destination as! HotDealsViewController
             print(self.apartmentId!)

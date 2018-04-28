@@ -35,7 +35,7 @@ class ChatUserListControllerViewController: UIViewController ,UITableViewDelegat
         tableView.dataSource = self
         tableView.estimatedRowHeight = 72
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        self.hideKeyboardWhenTappedAround()
         observeMessages()
         getMessagePerUser()
         print(apartmentId!)

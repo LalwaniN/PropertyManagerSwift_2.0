@@ -21,11 +21,12 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
     @IBOutlet weak var issueImageLable: UILabel!
     @IBOutlet weak var issueDescription: UITextView!
     @IBOutlet weak var pickerView: UIPickerView!
+    var propertyManagerUserName = ""
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         request = MaintenanceRequest()
-        
+        self.hideKeyboardWhenTappedAround()
         pickerData = ["Pest Control", "Appliance Repair", "Plumbing", "Carpet Cleaning", "Noise Issue"]
         // Do any additional setup after loading the view.
         self.pickerView.delegate = self
@@ -46,6 +47,7 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
         imagePicker.delegate = self
     
     }
+    
     @IBAction func imagePickerAction(_ sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
@@ -87,7 +89,11 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
         
      request?.apartmentId = apartmentId
      request?.requestDescription = issueDescription.text!
+     request?.propertyManagerUserName = propertyManagerUserName
      request?.saveImagetoFirebase()
+        let alert = UIAlertController(title: "Alert", message: "Request raised successfully!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -109,6 +115,9 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "backToTenantHomeFromReportSegue"{
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "backToTenantHome"{
             let controller = segue.destination as! TenantHomeViewController
             print(self.apartmentId!)
             controller.apartmentId = self.apartmentId!

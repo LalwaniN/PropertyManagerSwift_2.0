@@ -79,7 +79,7 @@ class ChatLogViewController: UIViewController,UITableViewDelegate,UITextFieldDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 50
@@ -92,7 +92,7 @@ class ChatLogViewController: UIViewController,UITableViewDelegate,UITextFieldDel
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(notification:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear(notification:)), name: .UIKeyboardWillHide, object: nil)
     }
-    
+
     func findMessagesList(){
         let ref = Database.database().reference().child("messages")
         ref.observe(.childAdded, with: { (snapshot) in

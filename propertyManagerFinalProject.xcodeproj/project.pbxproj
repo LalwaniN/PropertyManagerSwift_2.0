@@ -57,6 +57,7 @@
 		C1615E8C208D4BC20003839B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1615E8B208D4BC20003839B /* ImageCollectionViewCell.swift */; };
 		C1615E8E208D4EBC0003839B /* PropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1615E8D208D4EBC0003839B /* PropertyDetailViewController.swift */; };
 		C18DE52A207D857F0045D0CA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18DE529207D857F0045D0CA /* RegisterViewController.swift */; };
+		C1AD417920946BB300BCF98C /* ReportedIssuesForPropManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AD417820946BB300BCF98C /* ReportedIssuesForPropManagerViewController.swift */; };
 		C1B749F320919A1300C76F51 /* PropertyManagerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B749F220919A1300C76F51 /* PropertyManagerHomeViewController.swift */; };
 		C1E8F6F4207B1B6A00507E61 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F6F3207B1B6A00507E61 /* Document.swift */; };
 		C1E8F6F6207B1BC400507E61 /* MaintenanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F6F5207B1BC400507E61 /* MaintenanceRequest.swift */; };
@@ -157,6 +158,7 @@
 		C1615E8D208D4EBC0003839B /* PropertyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailViewController.swift; sourceTree = "<group>"; };
 		C1615E96208D57190003839B /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
 		C18DE529207D857F0045D0CA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C1AD417820946BB300BCF98C /* ReportedIssuesForPropManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportedIssuesForPropManagerViewController.swift; sourceTree = "<group>"; };
 		C1B749F220919A1300C76F51 /* PropertyManagerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyManagerHomeViewController.swift; sourceTree = "<group>"; };
 		C1E8F6F3207B1B6A00507E61 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		C1E8F6F5207B1BC400507E61 /* MaintenanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceRequest.swift; sourceTree = "<group>"; };
@@ -329,6 +331,8 @@
 				C1EC9C122093EDFA006978E2 /* ReportIssuesViewController.swift */,
 				5795084A2094D1BA00976129 /* PMChatUserListViewController.swift */,
 				5795084C2094D21900976129 /* PMChatLogViewController.swift */,
+				C1AD417820946BB300BCF98C /* ReportedIssuesForPropManagerViewController.swift */,
+
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -515,6 +519,7 @@
 				577CA2A1209028BC00A3792A /* TenantBookingTableViewCell.swift in Sources */,
 				57859CC0208C25110053DD63 /* TenantHomeViewController.swift in Sources */,
 				5716927220931B3A00BA529E /* MessageQueue.swift in Sources */,
+				C1AD417920946BB300BCF98C /* ReportedIssuesForPropManagerViewController.swift in Sources */,
 				C18DE52A207D857F0045D0CA /* RegisterViewController.swift in Sources */,
 				57A3498C2093818A00D56CE2 /* Deals.swift in Sources */,
 				574814F2208EA25700FF5802 /* FirstViewController.swift in Sources */,

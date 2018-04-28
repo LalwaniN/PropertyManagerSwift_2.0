@@ -123,8 +123,10 @@ class bookApartmentViewController: UIViewController,UIImagePickerControllerDeleg
         tableView.reloadData()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         tableView.setContentOffset(tableView.contentOffset, animated: false)
         imagePicker.delegate = self
         menuOutlet.titleLabel?.textAlignment = NSTextAlignment.center

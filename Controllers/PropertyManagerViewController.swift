@@ -30,6 +30,8 @@ class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
         tableView.dataSource = self
         tableView.estimatedRowHeight = 250
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -38,8 +40,20 @@ class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
         searchbar.scopeButtonTitles = ["Rented","Vacant"]
         searchbar.selectedScopeButtonIndex = 0
         searchbar.delegate = self
+
         
         getTenantList()
+        let width = UIScreen.main.bounds.size.width
+        let height = UIScreen.main.bounds.size.height
+        
+        let imageViewBackground = UIImageView(frame: CGRect(x:0, y:0, width:width, height:height))
+        imageViewBackground.contentMode = .scaleAspectFit
+        imageViewBackground.image = UIImage(named: "bcgd3")?.alpha(0.7)
+        
+        imageViewBackground.contentMode = UIViewContentMode.scaleAspectFill
+        
+        self.view.addSubview(imageViewBackground)
+        self.view.sendSubview(toBack: imageViewBackground)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

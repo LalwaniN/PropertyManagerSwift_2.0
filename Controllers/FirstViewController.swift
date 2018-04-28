@@ -35,7 +35,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         view.backgroundColor = UIColor(white: 1, alpha: 0.5)
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         sideView.backgroundColor = UIColor(white: 1, alpha: 0.5)
@@ -254,6 +254,7 @@ extension FirstViewController : UITableViewDataSource {
         ref?.queryOrdered(byChild: "isRented").queryEqual(toValue: "false").observe(.childAdded, with: { (snapshot) in
                 if(!snapshot.hasChildren()){
                     print("No apartments available")
+                    return
                 }
                 let values = snapshot.value as? NSDictionary
                   print("--------------")
@@ -313,6 +314,16 @@ extension FirstViewController : UITableViewDataSource {
             }
         }
     }
+}
+
+class TeamMember {
+    var name : String = ""
+    var title : String = ""
+    var locatio : String = ""
+    var about : String = ""
+    var image : UIImage?
+    var gitHub : String = ""
+    var facebook : String = ""
 }
 
 class firstPageViewCell: UITableViewCell{

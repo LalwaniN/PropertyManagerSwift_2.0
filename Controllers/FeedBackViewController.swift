@@ -46,7 +46,7 @@ class FeedBackViewController: UIViewController,UITableViewDataSource,UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         navigationBar.setBackgroundImage(UIImage(named: "background"), for: .default)
         navigationBar.isTranslucent = true
@@ -64,6 +64,11 @@ class FeedBackViewController: UIViewController,UITableViewDataSource,UITableView
         //keyboardListener = KeyboardListener(scrollView: feedbacksTableView!, constraint: bottomConstraint!)
         initBottomViewShadow()
         initTextFieldsUI()
+    }
+    func textFieldShouldReturn(_ textField: UITextField)-> Bool{
+        nameField.resignFirstResponder()
+        feebackField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {

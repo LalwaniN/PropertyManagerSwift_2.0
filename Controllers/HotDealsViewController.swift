@@ -40,6 +40,7 @@ class HotDealsViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         tableView.delegate = self
