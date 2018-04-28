@@ -175,10 +175,8 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[GTMSessionUploadFetcher uploadFetcherWithProperties:isQueryFetch:]"
-                  moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "826">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -195,10 +193,8 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[GTMSessionUploadFetcher uploadFetcherWithProperties:isQueryFetch:]"
-                  moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "865">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -340,45 +336,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Cells/TenantBookingTableViewCell.swift"
-            timestampString = "546620631.449144"
+            timestampString = "546637920.833811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
             landmarkName = "firstNameTextFieldEditing(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546589188.135931"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "getTenantList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/bookApartmentViewController.swift"
-            timestampString = "546620631.449201"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "bookApartmentViewController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -436,7 +400,7 @@
                   moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/ChatLogViewController.swift"
-                  timestampString = "546634720.798499"
+                  timestampString = "546637921.113748"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
@@ -451,7 +415,7 @@
                   moduleName = "propertyManagerFinalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/ChatLogViewController.swift"
-                  timestampString = "546634720.799893"
+                  timestampString = "546637921.115391"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "112"
@@ -467,40 +431,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546589188.137516"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/TenantHomeViewController.swift"
-            timestampString = "546589188.1377259"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Controllers/PropertyManagerViewController.swift"
-            timestampString = "546634720.655419"
+            timestampString = "546637920.833933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
@@ -516,11 +448,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PMChatUserListViewController.swift"
-            timestampString = "546634720.65553"
+            timestampString = "546637920.833977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/PMChatUserListViewController.swift"
+            timestampString = "546637920.8343821"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "findMessagesList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "propertyManagerFinalProject.PMChatUserListViewController.findMessagesList() -&gt; ()"
+                  moduleName = "propertyManagerFinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/PMChatUserListViewController.swift"
+                  timestampString = "546637921.126708"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "378">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in propertyManagerFinalProject.PMChatUserListViewController.findMessagesList() -&gt; ()"
+                  moduleName = "propertyManagerFinalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/PMChatUserListViewController.swift"
+                  timestampString = "546637921.128962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "5991">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/PMChatUserListViewController.swift"
+            timestampString = "546637920.8346421"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "findMessagesList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Controllers/PMChatUserListViewController.swift"
+            timestampString = "546637920.83485"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -532,109 +544,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PMChatUserListViewController.swift"
-            timestampString = "546634720.656091"
+            timestampString = "546637920.835054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in propertyManagerFinalProject.PMChatUserListViewController.tableView(__ObjC.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "propertyManagerFinalProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/PMChatUserListViewController.swift"
-                  timestampString = "546634720.835089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "1799">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in propertyManagerFinalProject.PMChatUserListViewController.tableView(__ObjC.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "propertyManagerFinalProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/PMChatUserListViewController.swift"
-                  timestampString = "546634720.836531"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "6979">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/PropertyManagerHomeViewController.swift"
-            timestampString = "546634720.656453"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "getTenantList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/RegisterViewController.swift"
-            timestampString = "546634720.656695"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "propertyManagerFinalProject.RegisterViewController.viewDidAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "propertyManagerFinalProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/RegisterViewController.swift"
-                  timestampString = "546634720.843874"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
-                  offsetFromSymbolStart = "1294">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in propertyManagerFinalProject.RegisterViewController.viewDidAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "propertyManagerFinalProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/koticha.c/Desktop/PropertyManagerSwift_2.0/Controllers/RegisterViewController.swift"
-                  timestampString = "546634720.845765"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "201"
-                  endingLineNumber = "201"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -644,44 +560,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/PMChatUserListViewController.swift"
-            timestampString = "546634720.656742"
+            timestampString = "546637920.835258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/PropertyManagerHomeViewController.swift"
-            timestampString = "546634720.657083"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Controllers/PropertyManagerHomeViewController.swift"
-            timestampString = "546634720.657293"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "findMessagesList()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

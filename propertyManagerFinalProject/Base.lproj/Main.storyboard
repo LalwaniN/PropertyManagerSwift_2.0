@@ -938,7 +938,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1953" y="-743"/>
+            <point key="canvasLocation" x="1952.8" y="-743.47826086956525"/>
         </scene>
         <!--Book Apartment View Controller-->
         <scene sceneID="UR4-HU-V07">
@@ -2313,7 +2313,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcF-k5-LLY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcF-k5-LLY">
                                                     <rect key="frame" x="8" y="42.5" width="270" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="270" id="NLI-Xf-Prx"/>
@@ -2345,7 +2345,7 @@
                                             <outlet property="nameLabel" destination="8uB-bZ-sIB" id="r6k-f6-vmr"/>
                                             <outlet property="subtitleLabel" destination="bcF-k5-LLY" id="haF-Kv-eCH"/>
                                             <outlet property="timestampLabelCell" destination="TBk-Qk-pvi" id="E9Y-qG-69T"/>
-                                            <segue destination="qeU-YQ-ISe" kind="show" id="ugX-f4-43k"/>
+                                            <segue destination="qeU-YQ-ISe" kind="show" identifier="pmChatLogSegue" id="ugX-f4-43k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2833,7 +2833,7 @@
         <segue reference="rI2-b4-0Rz"/>
         <segue reference="QBe-4L-xc2"/>
         <segue reference="duX-8a-5kJ"/>
-        <segue reference="rjx-gO-rc7"/>
-        <segue reference="4cW-R7-GbR"/>
+        <segue reference="jYz-9j-Hxu"/>
+        <segue reference="eym-Xb-d0O"/>
     </inferredMetricsTieBreakers>
 </document>

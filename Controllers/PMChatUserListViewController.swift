@@ -35,8 +35,12 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
 
     var propManagerUserName = ""
     var sourceEmail : String?
-    var userList:[String]?
-    var messagesList: [MessageQueue] = []
+    var userList:[String]? = []
+    var messagesList: [MessageQueue] = []{
+        didSet{
+            tableView.reloadData()
+        }
+    }
     var destinationUserName: String?
     var destinationEmail: String?
     var index: Int?
@@ -50,7 +54,7 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 50
+        tableView.estimatedRowHeight = 72
         tableView.rowHeight = UITableViewAutomaticDimension
         print(userList!)
         findMessagesList()
@@ -62,7 +66,7 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
             let controller = segue.destination as! PropertyManagerHomeViewController
             controller.propManagerUserName = self.propManagerUserName
         }
-        if segue.identifier == "" {
+        if segue.identifier == "pmChatLogSegue" {
             let controller = segue.destination as! PMChatLogViewController
             controller.propManagerUserName = self.propManagerUserName
         }
@@ -73,8 +77,8 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(userList!.count)
-        return userList!.count
+        print(messagesList.count)
+        return messagesList.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -115,7 +119,7 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
             let curruser = messagesList[indexPath.row].toId
             print(curruser!)
             var timestampcorrect: String = ""
-            tableView.estimatedRowHeight = 50
+            tableView.estimatedRowHeight = 72
             cell?.nameLabel.text = curruser
             cell?.subtitleLabel?.text = messagesList[indexPath.row].text
             if let timestamp = messagesList[indexPath.row].timestamp{
@@ -133,21 +137,6 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
         return cell!
     }
     
-    func observeMessages(){
-        let ref = Database.database().reference().child("messages")
-        ref.observeSingleEvent(of: .childAdded, with: { (snapshot) in
-            if let dict = snapshot.value as? [String:AnyObject]{
-                let message = MessageQueue()
-                //self.messagesKey.append(snapshot.key)
-                message.fromId = dict["fromId"]! as? String
-                message.text = dict["text"]! as? String
-                message.toId = dict["toId"]! as? String
-                message.timestamp = dict["timestamp"]! as? NSNumber
-                self.messagesList.append(message)
-            }
-        }, withCancel: nil)
-    }
-    
     func findMessagesList(){
         let ref = Database.database().reference().child("messages")
         ref.observe(.childAdded, with: { (snapshot) in
@@ -155,7 +144,7 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
                 print("No chats available!")
             }
             let value = snapshot.value as? [String:Any]
-            if((value!["toId"] as? String == self.sourceEmail! && value!["fromId"] as? String == self.sourceEmail!)){
+            if((value!["toId"] as? String == self.sourceEmail! || value!["fromId"] as? String == self.sourceEmail!)){
                 let message = MessageQueue()
                 message.fromId = value!["fromId"]! as? String
                 message.toId = value!["toId"]! as? String
@@ -166,7 +155,7 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
             self.messagesList.sort(by: { (m1,m2) -> Bool in
                 return m1.timestamp?.intValue < m2.timestamp?.intValue
             })
-            self.tableView.reloadData()
+            //self.tableView.reloadData()
         })
     }
 }

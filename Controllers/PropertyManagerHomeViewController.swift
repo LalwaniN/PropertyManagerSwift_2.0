@@ -15,6 +15,8 @@ class PropertyManagerHomeViewController: UIViewController {
     @IBOutlet weak var constraintForMenuView: NSLayoutConstraint!
     @IBOutlet weak var BlurView: UIVisualEffectView!
     @IBOutlet weak var SideView: UIView!
+    
+    
     var propManagerUserName = ""
     
     var tenantList:[String] = []
@@ -119,14 +121,10 @@ class PropertyManagerHomeViewController: UIViewController {
             controller.propManagerUserName  = self.propManagerUserName
         }
         if segue.identifier == "chatBuddyPropertyManagerSegue" {
-            DispatchQueue.global(qos: .userInitiated).async {
-                DispatchQueue.main.async {
-                    let controller = segue.destination as! PMChatUserListViewController
-                    controller.userList = self.tenantList
-                    controller.propManagerUserName = self.propManagerUserName
-                    controller.sourceEmail = self.propManagerUserName
-                }
-            }
+            let controller = segue.destination as! PMChatUserListViewController
+            controller.userList = self.tenantList
+            controller.propManagerUserName = self.propManagerUserName
+            controller.sourceEmail = self.propManagerUserName
         }
     }
 
@@ -143,6 +141,7 @@ class PropertyManagerHomeViewController: UIViewController {
             let values1 = values!["tenantList"]! as? [String]
                 let tempList = values!["tenantList"] as? [String]
                 self.tenantList = tempList!
+                print(self.tenantList)
             }
         })
     }

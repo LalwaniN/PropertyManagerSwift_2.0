@@ -166,7 +166,6 @@ class TenantHomeViewController: UIViewController {
                     }
                 }
             }
-            
         })
     }
     
