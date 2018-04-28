@@ -38,12 +38,12 @@ class Apartment{
         let rentedis = String(describing: self.isRented!)
         let beds = self.numberOfBeds
         let baths = self.numberOfBaths
-        let lsigned = (String(describing: self.leaseSigned!))
+        //let lsigned = (String(describing: self.leaseSigned!))
         let rent = self.rent
         print(beds!)
         print(baths!)
         print(self.apartmentImages!)
-        ref?.child(aid).setValue(["isRented":rentedis,"numberOfBeds":beds!, "numberOfBaths":baths!, "propertyType":self.propertyType!, "leaseSigned":lsigned, "propertyManagerUserName":self.propertyManagerUserName!,"rent":rent!,"apartmentImages":self.apartmentImages!,"tenantList":self.tenantList])
+        ref?.child(aid).setValue(["isRented":rentedis,"numberOfBeds":beds!, "numberOfBaths":baths!, "propertyType":self.propertyType!, "propertyManagerUserName":self.propertyManagerUserName!,"rent":rent!,"apartmentImages":self.apartmentImages!,"tenantList":self.tenantList])
         print((self.propertyAddress?.addressLine1)!)
         print((self.propertyAddress?.addressLine2)!)
             print((self.propertyAddress?.state)!)

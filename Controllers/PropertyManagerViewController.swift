@@ -11,30 +11,36 @@ import Firebase
 
 var strArray:[String] = ["1","2","3","4","5","6"]
 class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
-    
+    //Outlets
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    
     var propManagerUserName = ""
     var vacantApartments : [Apartment]? = []
     var filteredApartments : [Apartment]? = []
-     var ref: DatabaseReference?
+    var ref: DatabaseReference?
     var row: Int = 0
+    var tenant: Tenant?
+    var tenantList:[String] = []
+    
     override func viewDidAppear(_ animated: Bool) {
         getAllApartments()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.estimatedRowHeight = 250
         tableView.rowHeight = UITableViewAutomaticDimension
-        //getAllApartments()
         
         searchbar.showsScopeBar = true
         searchbar.scopeButtonTitles = ["Rented","Vacant"]
         searchbar.selectedScopeButtonIndex = 0
         searchbar.delegate = self
+        
+        getTenantList()
     }
-    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
@@ -123,8 +129,6 @@ class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
                     print((images[i] as? String)!)
                     apartment?.apartmentImages?.append((images[i] as? String)!)
                 }
-                
-                //}
             }
             self.vacantApartments?.append(apartment!)
             self.filteredApartments?.append(apartment!)
@@ -196,6 +200,21 @@ extension PropertyManagerViewController : UITableViewDataSource {
         
         return cell
     }
+    
+    func getTenantList(){
+        var ref: DatabaseReference =  Database.database().reference()
+        ref = Database.database().reference().child("apartments")
+        ref.queryOrdered(byChild: "propertyManagerUserName").queryEqual(toValue: self.propManagerUserName).observe(.childAdded, with: { (snapshot) in
+            if(!snapshot.hasChildren()){
+                print("No apartments available")
+            }
+            let values = snapshot.value as? NSDictionary
+            print("--------------")
+   
+            let tempList = values!["tenantList"] as? [String]
+            self.tenantList = tempList!
+        })
+    }
 }
 
 
@@ -208,16 +227,4 @@ class PropertyManagerDataSourceCell: UITableViewCell{
     func setupCell(image: UIImage?) {
         self.propertyImageView.image = image
     }
-    
-//    var strarray = strArray {
-//        didSet{
-//            self.updateUI()
-//        }
-//    }
-//
-//    func updateUI(){
-//        propertyImageView = UIImage(named: strArray[]) //classname.imagename
-//        propertyLabel = classname.label
-//    }
-    
 }

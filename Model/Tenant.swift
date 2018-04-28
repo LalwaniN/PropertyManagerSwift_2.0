@@ -27,7 +27,7 @@ class Tenant:User{
         print(self.password!)
         print(self.role!)
         var role = self.role?.rawValue
-        print(role)
+        print(role!)
         
         ref?.child(self.userName!).setValue(["firstName":self.firstName!, "lastName":self.lastName!,"identityDocuments":self.identityDocument!, "requestsRaised":self.requestsRaised!,"password":self.password!,"role":role!,"apartmentId":self.apartmentId!,"phone":self.phone!])
     }
@@ -51,7 +51,7 @@ class Tenant:User{
                 return
             }else{
                 print(metadata!.downloadURL()?.absoluteString)
-                self.identityDocument = metadata!.downloadURL()?.absoluteString
+                self.identityDocument = (metadata!.downloadURL()?.absoluteString)!
                 self.saveToFirebase()
             }
         }

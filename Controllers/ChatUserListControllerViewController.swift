@@ -29,7 +29,6 @@ class ChatUserListControllerViewController: UIViewController ,UITableViewDelegat
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -100,7 +99,6 @@ class ChatUserListControllerViewController: UIViewController ,UITableViewDelegat
                 messagedict[user] = ["",""]
             }
         }
-        
         
         for message in messagedict{
             keyList.append(message.key)

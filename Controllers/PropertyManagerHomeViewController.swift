@@ -16,6 +16,8 @@ class PropertyManagerHomeViewController: UIViewController {
     @IBOutlet weak var BlurView: UIVisualEffectView!
     @IBOutlet weak var SideView: UIView!
     var propManagerUserName = ""
+    
+    var tenantList:[String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,7 @@ class PropertyManagerHomeViewController: UIViewController {
         
         self.view.addSubview(imageViewBackground)
         self.view.sendSubview(toBack: imageViewBackground)
-
+        getTenantList()
         // Do any additional setup after loading the view.
     }
 
@@ -114,18 +116,30 @@ class PropertyManagerHomeViewController: UIViewController {
         }else if segue.identifier == "myPropertiesSegue"{
             let controller = segue.destination as! PropertyManagerViewController
             controller.propManagerUserName  = self.propManagerUserName
-
+        }
+        if segue.identifier == "chatBuddyPropertyManagerSegue" {
+            let controller = segue.destination as! PMChatUserListViewController
+            controller.userList = self.tenantList
+            controller.propManagerUserName = self.propManagerUserName
+            controller.sourceEmail = self.propManagerUserName
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getTenantList(){
+        var ref: DatabaseReference =  Database.database().reference()
+        ref = Database.database().reference().child("apartments")
+        ref.queryOrdered(byChild: "propertyManagerUserName").queryEqual(toValue: self.propManagerUserName).observe(.childAdded, with: { (snapshot) in
+            if(!snapshot.hasChildren()){
+                print("No apartments available")
+            }
+            let values = snapshot.value as? NSDictionary
+            print("--------------")
+            if(!((values!["tenantList"]) == nil)){
+            let values1 = values!["tenantList"]! as? [String]
+                let tempList = values!["tenantList"] as? [String]
+                self.tenantList = tempList!
+            }
+        })
     }
-    */
 
 }

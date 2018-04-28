@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 var globalPathString:String?
 
@@ -82,28 +83,26 @@ class TenantBookingTableViewCell: UITableViewCell,UITableViewDelegate,UITextFiel
         let indexPath = tableView.indexPath(for: cell!)
         print(indexPath?.row)
         if(sender.text == nil){
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                while let presentedViewController = topController.presentedViewController {
-                    topController = presentedViewController
-                    let alert = UIAlertController(title: "Alert", message: "Can't be empty!", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    topController.present(alert, animated: true, completion: nil)
-                    return
-                }
-            }
+            let alert = UIAlertController(title: "Alert", message:"Can't be empty!" , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            let alertWindow = UIWindow(frame: (window?.bounds)!)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+            return
         }else{
             do {
                 let regex = try NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: [])
                 if regex.firstMatch(in: sender.text!, options: [], range: NSMakeRange(0, sender.text!.characters.count)) != nil {
-                    if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                        while let presentedViewController = topController.presentedViewController {
-                            topController = presentedViewController
-                            let alert = UIAlertController(title: "Alert", message: "Must not contain Number in Name", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                            topController.present(alert, animated: true, completion: nil)
-                            return
-                        }
-                    }
+                    let alert = UIAlertController(title: "Alert", message:"Must be alphabets only!" , preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertWindow = UIWindow(frame: (window?.bounds)!)
+                    alertWindow.rootViewController = UIViewController()
+                    alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                    alertWindow.makeKeyAndVisible()
+                    alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                    return
                 }
             }
             catch {
@@ -119,28 +118,26 @@ class TenantBookingTableViewCell: UITableViewCell,UITableViewDelegate,UITextFiel
         let indexPath = tableView.indexPath(for: cell!)
         print(indexPath?.row)
         if(sender.text == nil){
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                while let presentedViewController = topController.presentedViewController {
-                    topController = presentedViewController
-                    let alert = UIAlertController(title: "Alert", message: "Can't be empty!", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    topController.present(alert, animated: true, completion: nil)
-                    return
-                }
-            }
+            let alert = UIAlertController(title: "Alert", message:"Can't be empty!" , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            let alertWindow = UIWindow(frame: (window?.bounds)!)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+            return
         }else{
             do {
                 let regex = try NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: [])
                 if regex.firstMatch(in: sender.text!, options: [], range: NSMakeRange(0, sender.text!.characters.count)) != nil {
-                    if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                        while let presentedViewController = topController.presentedViewController {
-                            topController = presentedViewController
-                            let alert = UIAlertController(title: "Alert", message: "Must not contain Number in Name", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                            topController.present(alert, animated: true, completion: nil)
-                            return
-                        }
-                    }
+                    let alert = UIAlertController(title: "Alert", message:"Must be alphabets only!" , preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertWindow = UIWindow(frame: (window?.bounds)!)
+                    alertWindow.rootViewController = UIViewController()
+                    alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                    alertWindow.makeKeyAndVisible()
+                    alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                    return
                 }
             }
             catch {
@@ -156,29 +153,45 @@ class TenantBookingTableViewCell: UITableViewCell,UITableViewDelegate,UITextFiel
         let indexPath = tableView.indexPath(for: cell!)
         print(indexPath?.row)
         if(sender.text == nil){
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                while let presentedViewController = topController.presentedViewController {
-                    topController = presentedViewController
-                    let alert = UIAlertController(title: "Alert", message: "Can't be empty!", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    topController.present(alert, animated: true, completion: nil)
-                    return
-                }
-            }
+            let alert = UIAlertController(title: "Alert", message:"Can't be empty!" , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            let alertWindow = UIWindow(frame: (window?.bounds)!)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+            return
         }else{
             if(!isValidEmail(testStr: sender.text!)){
-                if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                    while let presentedViewController = topController.presentedViewController {
-                        topController = presentedViewController
-                        let alert = UIAlertController(title: "Alert", message: "NOT A VALID EMAIL!", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                        topController.present(alert, animated: true, completion: nil)
-                        return
-                    }
-                }
+                let alert = UIAlertController(title: "Alert", message:"NOT A VALID EMAIL!" , preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                let alertWindow = UIWindow(frame: (window?.bounds)!)
+                alertWindow.rootViewController = UIViewController()
+                alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                alertWindow.makeKeyAndVisible()
+                alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                return
             }
         }
-        usernamearray[(indexPath?.row)!] = sender.text!
+        var userName : String = sender.text!
+        userName = userName.replacingOccurrences(of: ".", with: ",")
+        var ref:DatabaseReference?
+        ref = Database.database().reference().child("users")
+        ref?.child(userName).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if(snapshot.hasChildren()){
+                let alert = UIAlertController(title: "Alert", message:"USER ALREADY REGISTERED!" , preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                let alertWindow = UIWindow(frame: (self.window?.bounds)!)
+                alertWindow.rootViewController = UIViewController()
+                alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                alertWindow.makeKeyAndVisible()
+                alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                return
+            }else{
+                usernamearray[(indexPath?.row)!] = sender.text!
+            }
+        })
     }
     
     @IBAction func passwordTextFieldEditing(_ sender: UITextField) {
@@ -187,26 +200,24 @@ class TenantBookingTableViewCell: UITableViewCell,UITableViewDelegate,UITextFiel
         let indexPath = tableView.indexPath(for: cell!)
         print(indexPath?.row)
         if(sender.text == nil){
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                while let presentedViewController = topController.presentedViewController {
-                    topController = presentedViewController
-                    let alert = UIAlertController(title: "Alert", message: "Can't be empty!", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    topController.present(alert, animated: true, completion: nil)
-                    return
-                }
-            }
+            let alert = UIAlertController(title: "Alert", message:"Can't be empty!" , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            let alertWindow = UIWindow(frame: (window?.bounds)!)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+            return
         }else{
             if(!isPasswordValid(sender.text!)){
-                if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                    while let presentedViewController = topController.presentedViewController {
-                        topController = presentedViewController
-                        let alert = UIAlertController(title: "Alert", message: "Password should contain 4 characters and should contain 1 alphabet and 1 spcial character !,@ !!", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                        topController.present(alert, animated: true, completion: nil)
-                        return
-                    }
-                }
+                let alert = UIAlertController(title: "Alert", message:"Password should contain 4 characters and should contain 1 alphabet and 1 spcial character !,@ !!" , preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                let alertWindow = UIWindow(frame: (window?.bounds)!)
+                alertWindow.rootViewController = UIViewController()
+                alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                alertWindow.makeKeyAndVisible()
+                alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                return
             }
         }
         passwordArray[(indexPath?.row)!] = sender.text!
@@ -218,61 +229,56 @@ class TenantBookingTableViewCell: UITableViewCell,UITableViewDelegate,UITextFiel
         let indexPath = tableView.indexPath(for: cell!)
         print(indexPath?.row)
         if(sender.text == nil){
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                while let presentedViewController = topController.presentedViewController {
-                    topController = presentedViewController
-                    let alert = UIAlertController(title: "Alert", message: "Can't be empty!", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                    topController.present(alert, animated: true, completion: nil)
-                    return
-                }
-            }
+            let alert = UIAlertController(title: "Alert", message:"Can't be empty!" , preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            let alertWindow = UIWindow(frame: (window?.bounds)!)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+            return
         }else{
             if let number = Int(sender.text!) {
                 if(number < 0){
-                    if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                        while let presentedViewController = topController.presentedViewController {
-                            topController = presentedViewController
-                            let alert = UIAlertController(title: "Alert", message: "Invalid Phone Number!!", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                            topController.present(alert, animated: true, completion: nil)
-                            return
-                        }
-                    }
+                    let alert = UIAlertController(title: "Alert", message:"Invalid Phone Number" , preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertWindow = UIWindow(frame: (window?.bounds)!)
+                    alertWindow.rootViewController = UIViewController()
+                    alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                    alertWindow.makeKeyAndVisible()
+                    alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                    return
                 }
                 if(number>Int.max){
-                    if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                        while let presentedViewController = topController.presentedViewController {
-                            topController = presentedViewController
-                            let alert = UIAlertController(title: "Alert", message: "Invalid Phone Number!!", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                            topController.present(alert, animated: true, completion: nil)
-                            return
-                        }
-                    }
+                    let alert = UIAlertController(title: "Alert", message:"Invalid Phone Number" , preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertWindow = UIWindow(frame: (window?.bounds)!)
+                    alertWindow.rootViewController = UIViewController()
+                    alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                    alertWindow.makeKeyAndVisible()
+                    alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                    return
                 }
                 
                 if(String(number).count>10 || String(number).count<10){
-                    if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                        while let presentedViewController = topController.presentedViewController {
-                            topController = presentedViewController
-                            let alert = UIAlertController(title: "Alert", message: "Invalid Phone Number!!", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                            topController.present(alert, animated: true, completion: nil)
-                            return
-                        }
-                    }
+                    let alert = UIAlertController(title: "Alert", message:"Invalid Phone Number" , preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alertWindow = UIWindow(frame: (window?.bounds)!)
+                    alertWindow.rootViewController = UIViewController()
+                    alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                    alertWindow.makeKeyAndVisible()
+                    alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                    return
                 }
             }else{
-                if var topController = UIApplication.shared.keyWindow?.rootViewController {
-                    while let presentedViewController = topController.presentedViewController {
-                        topController = presentedViewController
-                        let alert = UIAlertController(title: "Alert", message: "Phone Number can contain onl digits!!", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                        topController.present(alert, animated: true, completion: nil)
-                        return
-                    }
-                }
+                let alert = UIAlertController(title: "Alert", message:"Phone Number can contain only digits!!" , preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                let alertWindow = UIWindow(frame: (window?.bounds)!)
+                alertWindow.rootViewController = UIViewController()
+                alertWindow.windowLevel = UIWindowLevelAlert + 1;
+                alertWindow.makeKeyAndVisible()
+                alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                return
             }
         }
         contactNumberArray[(indexPath?.row)!] = Int64(sender.text!)!

@@ -85,7 +85,6 @@ class ChatLogViewController: UIViewController,UITableViewDelegate,UITextFieldDel
         tableView.rowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        
         findMessagesList()
         // Do any additional setup after loading the view.
         messageTextField.delegate = self
@@ -202,10 +201,12 @@ extension ChatLogViewController : UITableViewDataSource {
         if(message.toId == destinationEmail){
             cell.messageLabel.textAlignment = NSTextAlignment.left
             cell.messageLabel.text = message.text
+            cell.timeStampLabel.textAlignment = NSTextAlignment.left
             cell.timeStampLabel.text = latestTimeStamp
         }else{
             cell.messageLabel.textAlignment = NSTextAlignment.right
             cell.messageLabel.text = message.text
+            cell.timeStampLabel.textAlignment = NSTextAlignment.right
             cell.timeStampLabel.text = latestTimeStamp
         }
         

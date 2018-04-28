@@ -89,9 +89,11 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
      request?.requestDescription = issueDescription.text!
      request?.saveImagetoFirebase()
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.request?.requestImage = pickedImage
@@ -103,6 +105,14 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
             issueImageLable.text = url.absoluteString!
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "backToTenantHomeFromReportSegue"{
+            let controller = segue.destination as! TenantHomeViewController
+            print(self.apartmentId!)
+            controller.apartmentId = self.apartmentId!
+        }
     }
 }
 

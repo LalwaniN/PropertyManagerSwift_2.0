@@ -15,7 +15,6 @@ class bookApartmentViewController: UIViewController,UIImagePickerControllerDeleg
             let indexPath = IndexPath(row: index!, section: 0)
             let cell = tableView.cellForRow(at: indexPath) as? TenantBookingTableViewCell
             cell?.DocumentPathLabel.text = pathArray![index!]
-            //tableView.reloadData()
         }
     }
     
@@ -46,6 +45,13 @@ class bookApartmentViewController: UIViewController,UIImagePickerControllerDeleg
     @IBAction func submitDetailsBtn(_ sender: Any) {
         print(value!)
         
+        if(firstnameArray.count < Int(value!)! || lastnameArray.count < Int(value!)! || usernamearray.count < Int(value!)! || passwordArray.count < Int(value!)! || imageArray.count < Int(value!)! || contactNumberArray.count < Int(value!)!){
+            let alert = UIAlertController(title: "SUCCESS", message: "ALL FIELDS ARE MANDATORY!!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         for i in 0..<Int(value!)!{
             tenant = Tenant()
             tenant?.firstName = firstnameArray[i]
@@ -55,42 +61,15 @@ class bookApartmentViewController: UIViewController,UIImagePickerControllerDeleg
             tenant?.documentImage = imageArray[i]
             tenant?.phone = contactNumberArray[i]
             tenant?.role = Role.Tenant
-            //temporary
-//            tenant?.identityDocument = "https://firebasestorage.googleapis.com/v0/b/swiftfinalproject-c347c.appspot.com/o/NxFXi5Lg.png?alt=media&token=2db1151f-6b97-46ae-8aa6-c14ebbe37985"
-            //temporary
-           // tenant?.saveToFirebase()
             tenant?.apartmentId = self.apartment?.apartmentId!
             tenant?.saveImagetoFirebase()
             apartment?.tenantList.append((tenant?.userName!)!)
             apartment?.isRented = true
             apartment?.saveToFirebase()
         }
-//            tenant = Tenant()
-//            let cell = tableView.cellForRow(at: IndexPath(row: i,section: 0)) as! TenantBookingTableViewCell
-//            tenant?.firstName = cell.firstNameLabelCell.text!
-//            print(cell.firstNameLabelCell.text!)
-//            print((tenant?.firstName)!)
-//            tenant?.lastName = cell.lastNameLabelCell.text!
-//            tenant?.userName = cell.addressLine1TextField.text!
-//            tenant?.password = cell.addressLine2TextField.text!
-//            tenant?.phone = Int64(cell.contactNumberTextField.text!)
-//            if (images?[i]) != nil{
-//                 tenant?.documentImage = images?[i]
-//            }else{
-//                tenant?.documentImage = UIImage(named: "defaultDoc")
-//            }
-//
-//            tenant?.apartmentId = apartment?.apartmentId
-//            tenant?.role = Role.Tenant
-//            //temporary
-//            tenant?.identityDocument = "https://firebasestorage.googleapis.com/v0/b/swiftfinalproject-c347c.appspot.com/o/NxFXi5Lg.png?alt=media&token=2db1151f-6b97-46ae-8aa6-c14ebbe37985"
-//            //temporary
-//            tenant?.saveToFirebase()
-//            //tenant?.saveImagetoFirebase()
-//            apartment?.tenantList.append((tenant?.userName!)!)
-//            apartment?.isRented = true
-//            apartment?.saveToFirebase()
-//        }
+        let alert = UIAlertController(title: "SUCCESS", message: "Tenant(s) Successfully saved! \n Congralutions on your new apartment!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func uploadDocBtnAction(_ sender: UIButton) {
@@ -141,7 +120,7 @@ class bookApartmentViewController: UIViewController,UIImagePickerControllerDeleg
         tableView.dataSource = self
         tableView.estimatedRowHeight = 650
         tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -171,10 +150,8 @@ class bookApartmentViewController: UIViewController,UIImagePickerControllerDeleg
         if segue.identifier == "backButtonBookSegue" {
             let controller = segue.destination as! PropertyDetailViewController
             controller.apartment = apartment
-            
         }
     }
-
 }
 
 extension bookApartmentViewController : UITableViewDataSource {

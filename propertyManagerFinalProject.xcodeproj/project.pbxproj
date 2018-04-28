@@ -43,6 +43,8 @@
 		57929526207B13E4007DDF83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57929525207B13E4007DDF83 /* User.swift */; };
 		57929528207B1471007DDF83 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57929527207B1471007DDF83 /* Tenant.swift */; };
 		5792952A207B155C007DDF83 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57929529207B155C007DDF83 /* Owner.swift */; };
+		5795084B2094D1BA00976129 /* PMChatUserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795084A2094D1BA00976129 /* PMChatUserListViewController.swift */; };
+		5795084D2094D21900976129 /* PMChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795084C2094D21900976129 /* PMChatLogViewController.swift */; };
 		57A2246620802F8900A0F060 /* PropertyManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2246520802F8900A0F060 /* PropertyManagerViewController.swift */; };
 		57A3498A2093802C00D56CE2 /* HotDealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A349892093802C00D56CE2 /* HotDealsTableViewCell.swift */; };
 		57A3498C2093818A00D56CE2 /* Deals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3498B2093818A00D56CE2 /* Deals.swift */; };
@@ -140,6 +142,8 @@
 		57929525207B13E4007DDF83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57929527207B1471007DDF83 /* Tenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tenant.swift; sourceTree = "<group>"; };
 		57929529207B155C007DDF83 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		5795084A2094D1BA00976129 /* PMChatUserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMChatUserListViewController.swift; sourceTree = "<group>"; };
+		5795084C2094D21900976129 /* PMChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMChatLogViewController.swift; sourceTree = "<group>"; };
 		57A2246520802F8900A0F060 /* PropertyManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyManagerViewController.swift; sourceTree = "<group>"; };
 		57A349892093802C00D56CE2 /* HotDealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDealsTableViewCell.swift; sourceTree = "<group>"; };
 		57A3498B2093818A00D56CE2 /* Deals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deals.swift; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 				57DF3FB42092B28000E2B808 /* ChatLogViewController.swift */,
 				57A3498D209383C600D56CE2 /* HotDealsViewController.swift */,
 				C1EC9C122093EDFA006978E2 /* ReportIssuesViewController.swift */,
+				5795084A2094D1BA00976129 /* PMChatUserListViewController.swift */,
+				5795084C2094D21900976129 /* PMChatLogViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -483,6 +489,7 @@
 				57DF3FB52092B28000E2B808 /* ChatLogViewController.swift in Sources */,
 				57047F55207D6EE3000EC79C /* LoginViewController.swift in Sources */,
 				C1EC9C132093EDFA006978E2 /* ReportIssuesViewController.swift in Sources */,
+				5795084B2094D1BA00976129 /* PMChatUserListViewController.swift in Sources */,
 				57A3498A2093802C00D56CE2 /* HotDealsTableViewCell.swift in Sources */,
 				C1B749F320919A1300C76F51 /* PropertyManagerHomeViewController.swift in Sources */,
 				5726034B208EE46900CBACDF /* FeedBackViewController.swift in Sources */,
@@ -499,6 +506,7 @@
 				579294DB207B00F9007DDF83 /* AppDelegate.swift in Sources */,
 				57929528207B1471007DDF83 /* Tenant.swift in Sources */,
 				5729D0F7208EFDB700028C88 /* FeedbackTableViewCell.swift in Sources */,
+				5795084D2094D21900976129 /* PMChatLogViewController.swift in Sources */,
 				C1E8F6F4207B1B6A00507E61 /* Document.swift in Sources */,
 				57260343208EDB2500CBACDF /* CardTableViewCell.swift in Sources */,
 				57DEADB82092AA3200EB39EC /* ChatUserListControllerViewController.swift in Sources */,
