@@ -41,8 +41,6 @@ class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
         searchbar.selectedScopeButtonIndex = 0
         searchbar.delegate = self
 
-        
-        getTenantList()
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
         
@@ -213,21 +211,6 @@ extension PropertyManagerViewController : UITableViewDataSource {
         cell.propertyLabel.layer.shadowRadius = 6
         
         return cell
-    }
-    
-    func getTenantList(){
-        var ref: DatabaseReference =  Database.database().reference()
-        ref = Database.database().reference().child("apartments")
-        ref.queryOrdered(byChild: "propertyManagerUserName").queryEqual(toValue: self.propManagerUserName).observe(.childAdded, with: { (snapshot) in
-            if(!snapshot.hasChildren()){
-                print("No apartments available")
-            }
-            let values = snapshot.value as? NSDictionary
-            print("--------------")
-   
-            let tempList = values!["tenantList"] as? [String]
-            self.tenantList = tempList!
-        })
     }
 }
 

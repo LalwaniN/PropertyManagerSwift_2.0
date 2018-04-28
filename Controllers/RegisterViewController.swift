@@ -58,9 +58,9 @@ var i = 0{
     }
 }
 
-var appearFlag: Bool = false
 class RegisterViewController: UIViewController ,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate ,XMLParserDelegate{
 
+    var appearFlag: Bool = false
     let propertyManager = PropertyManager()
     let address = Address()
     let apartmentAddress = Address()
@@ -108,7 +108,6 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate,UIImagePicke
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
         //Setting Delegates
@@ -311,21 +310,6 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate,UIImagePicke
         }
     }
     
-    
-    func textFieldShouldReturn(userText: UITextField) -> Bool {
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        confirmPasswordTextField.resignFirstResponder()
-        managementNameTextField.resignFirstResponder()
-        postalCodeTextField.resignFirstResponder()
-        stateTextField.resignFirstResponder()
-        cityTextField.resignFirstResponder()
-        addressLine1TextField.resignFirstResponder()
-        addressLine2TextField.resignFirstResponder()
-        phoneTextField.resignFirstResponder()
-        return true;
-    }
-    
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
@@ -471,7 +455,7 @@ class RegisterViewController: UIViewController ,UITextFieldDelegate,UIImagePicke
                     self.propertyManager.profileImage1 = UIImage(named: "1")!
                 }
                 self.propertyManager.saveImagetoFirebase()
-                appearFlag = true;
+                self.appearFlag = true;
                 self.getProperties()
             })
         }

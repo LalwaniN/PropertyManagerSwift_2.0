@@ -117,10 +117,11 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
         if segue.identifier == "backToTenantHomeFromReportSegue"{
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "backToTenantHome"{
-            let controller = segue.destination as! TenantHomeViewController
-            print(self.apartmentId!)
-            controller.apartmentId = self.apartmentId!
+            if segue.identifier == "backToTenantHome"{
+                let controller = segue.destination as! TenantHomeViewController
+                print(self.apartmentId!)
+                controller.apartmentId = self.apartmentId!
+            }
         }
     }
 }

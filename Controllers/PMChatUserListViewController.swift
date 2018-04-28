@@ -52,6 +52,7 @@ class PMChatUserListViewController: UIViewController,UITableViewDelegate,UITable
         tableView.dataSource = self
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
+        print(userList!)
         findMessagesList()
     }
 

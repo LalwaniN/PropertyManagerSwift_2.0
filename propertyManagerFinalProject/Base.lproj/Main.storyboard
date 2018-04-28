@@ -786,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfe-Ta-szd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908" y="-176.76161919040482"/>
+            <point key="canvasLocation" x="3252" y="1385"/>
         </scene>
         <!--Property Manager Home View Controller-->
         <scene sceneID="3bn-o2-dVi">
@@ -2832,11 +2832,8 @@
         <segue reference="5lS-Ky-1eD"/>
         <segue reference="rI2-b4-0Rz"/>
         <segue reference="QBe-4L-xc2"/>
-        <segue reference="G6d-62-lYs"/>
-        <segue reference="jYz-9j-Hxu"/>
-        <segue reference="BsK-eM-NF3"/>
         <segue reference="duX-8a-5kJ"/>
-        <segue reference="BC6-7N-FVR"/>
-        <segue reference="ODp-lz-Yv2"/>
+        <segue reference="rjx-gO-rc7"/>
+        <segue reference="4cW-R7-GbR"/>
     </inferredMetricsTieBreakers>
 </document>

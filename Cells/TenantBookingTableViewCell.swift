@@ -189,7 +189,7 @@ class TenantBookingTableViewCell: UITableViewCell,UITableViewDelegate,UITextFiel
                 alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
                 return
             }else{
-                usernamearray[(indexPath?.row)!] = sender.text!
+                usernamearray[(indexPath?.row)!] = userName
             }
         })
     }

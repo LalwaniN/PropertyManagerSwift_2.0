@@ -119,10 +119,14 @@ class PropertyManagerHomeViewController: UIViewController {
             controller.propManagerUserName  = self.propManagerUserName
         }
         if segue.identifier == "chatBuddyPropertyManagerSegue" {
-            let controller = segue.destination as! PMChatUserListViewController
-            controller.userList = self.tenantList
-            controller.propManagerUserName = self.propManagerUserName
-            controller.sourceEmail = self.propManagerUserName
+            DispatchQueue.global(qos: .userInitiated).async {
+                DispatchQueue.main.async {
+                    let controller = segue.destination as! PMChatUserListViewController
+                    controller.userList = self.tenantList
+                    controller.propManagerUserName = self.propManagerUserName
+                    controller.sourceEmail = self.propManagerUserName
+                }
+            }
         }
     }
 

@@ -27,7 +27,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+      
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         let blueColor : UIColor = UIColor( red: 68.0/255, green: 126.0/255, blue:194.0/255, alpha: 1.0 )
         
@@ -101,12 +101,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                                    animations: {
                                     self.loginButton.alpha = 1.0
         }, completion: nil)
-    }
-    
-    func textFieldShouldReturn(userText: UITextField) -> Bool {
-        usernameTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        return true;
     }
 
     override func didReceiveMemoryWarning() {
