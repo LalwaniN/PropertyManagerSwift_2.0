@@ -1,0 +1,22 @@
+{
+    "team" : [
+              {
+              "name":"CHINTAN KOTICHA",
+              "title": "FULL STACK DEVELOPER",
+              "location": "MASSACHUSSETTS, MA",
+              "about": "Chintan is an full stack software developer currently focusing on web development and iOS development, and the administrator of this site. He’s passionate both about making apps and teaching others the techniques to make them.\\n\\nWhen Chintan’s not programming, he’s probably playing mobile games, board games,or listening music.",
+              "image":"chintan.png",
+              "web": "http://www.github.com/chintankoticha",
+              "facebook": "https://www.facebook.com/chintan.koticha"
+              },
+              {
+              "name":"NEHA LALWANI",
+              "title": "iOS DEVELOPER",
+              "location": "MASSACHUSSETTS, MA",
+              "about": "Neha is an full stack software developer currently focusing on web development and iOS development, and the administrator of this site. He’s passionate both about making apps and teaching others the techniques to make them.\\n\\nWhen Neha’s not programming, he’s probably playing mobile games, board games,or listening music.",
+              "image":"neha.png",
+              "web": "http://www.github.com/LalwaniN",
+              "twitter": "https://www.facebook.com/nehalalwani",
+              }
+            ]
+}

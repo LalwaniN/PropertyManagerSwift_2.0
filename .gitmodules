@@ -1,0 +1,6 @@
+[submodule "MVCarouselCollectionView"]
+	path = MVCarouselCollectionView
+	url = https://github.com/bizz84/MVCarouselCollectionView.git
+[submodule "CryptoSwift"]
+	path = CryptoSwift
+	url = https://github.com/krzyzanowskim/CryptoSwift.git
