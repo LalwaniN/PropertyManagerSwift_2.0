@@ -108,9 +108,10 @@ class PropertyManagerHomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "chatBuddyIdentifier" {
             
-        }else if segue.identifier == "goToReportIssues" {
-            //let controller = segue.destination as! RepotedIssuesViewController
-            
+        }else if segue.identifier == "goToReportedIssuesView" {
+           let controller = segue.destination as! ReportedIssuesForPropManagerViewController
+             controller.propManagerUserName  = self.propManagerUserName
+            print(self.propManagerUserName)
         }else if segue.identifier == "myPropertiesSegue"{
             let controller = segue.destination as! PropertyManagerViewController
             controller.propManagerUserName  = self.propManagerUserName

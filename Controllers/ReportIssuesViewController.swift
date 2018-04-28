@@ -21,6 +21,7 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
     @IBOutlet weak var issueImageLable: UILabel!
     @IBOutlet weak var issueDescription: UITextView!
     @IBOutlet weak var pickerView: UIPickerView!
+    var propertyManagerUserName = ""
     var pickerData: [String] = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +88,7 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
         
      request?.apartmentId = apartmentId
      request?.requestDescription = issueDescription.text!
+     request?.propertyManagerUserName = propertyManagerUserName
      request?.saveImagetoFirebase()
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -103,6 +105,16 @@ class ReportIssuesViewController: UIViewController ,UIImagePickerControllerDeleg
             issueImageLable.text = url.absoluteString!
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "backToTenantHome"{
+            let controller = segue.destination as! TenantHomeViewController
+            print(self.apartmentId!)
+            controller.apartmentId = self.apartmentId!
+        }
     }
 }
 

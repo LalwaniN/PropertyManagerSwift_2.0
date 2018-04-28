@@ -12,13 +12,15 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class MaintenanceRequest {
-    var requestId : Int?
+    var requestId : String?
     var requestType : String?
     var requestDescription : String?
     var requestImagePath : String?
     var requestImage : UIImage?
     var apartmentId : Int64?
     var status: String?
+    var apartmentLine1 : String?
+    var propertyManagerUserName : String?
     
     func saveToFirebase() {
         var ref = Database.database().reference().child("issues")
@@ -30,7 +32,7 @@ class MaintenanceRequest {
         print(self.apartmentId!)
        // print(self.requestType!)
         print(self.status!)
-       childRef.setValue(["requestType":self.requestType!, "requestDescription":self.requestDescription!,"requestImagePath":self.requestImagePath! , "apartmentId":self.apartmentId!, "status":self.status!])
+        childRef.setValue(["requestType":self.requestType!, "requestDescription":self.requestDescription!,"requestImagePath":self.requestImagePath! , "apartmentId":self.apartmentId!, "status":self.status!, "propertyManagerUserName":self.propertyManagerUserName!])
        
     }
     

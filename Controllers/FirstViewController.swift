@@ -254,6 +254,7 @@ extension FirstViewController : UITableViewDataSource {
         ref?.queryOrdered(byChild: "isRented").queryEqual(toValue: "false").observe(.childAdded, with: { (snapshot) in
                 if(!snapshot.hasChildren()){
                     print("No apartments available")
+                    return
                 }
                 let values = snapshot.value as? NSDictionary
                   print("--------------")
