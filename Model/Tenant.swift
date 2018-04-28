@@ -36,7 +36,9 @@ class Tenant:User{
         let storage = Storage.storage()
         let randomName = "".randomAlphaNumericString(8)
         let storageRef = storage.reference().child("documents").child(randomName+".png")
-        
+        if self.documentImage == nil {
+            self.documentImage = UIImage(named: "1")!
+        }
         guard let uploadData = UIImagePNGRepresentation(self.documentImage!)
             else{
                 return

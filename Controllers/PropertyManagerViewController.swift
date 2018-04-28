@@ -10,21 +10,71 @@ import UIKit
 import Firebase
 
 var strArray:[String] = ["1","2","3","4","5","6"]
-class PropertyManagerViewController: UIViewController {
+class PropertyManagerViewController: UIViewController, UISearchBarDelegate  {
     
+    @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var propManagerUserName = ""
     var vacantApartments : [Apartment]? = []
     var filteredApartments : [Apartment]? = []
      var ref: DatabaseReference?
     var row: Int = 0
-    
+    override func viewDidAppear(_ animated: Bool) {
+        getAllApartments()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.estimatedRowHeight = 250
         tableView.rowHeight = UITableViewAutomaticDimension
-        getAllApartments()
+        //getAllApartments()
+        
+        searchbar.showsScopeBar = true
+        searchbar.scopeButtonTitles = ["Rented","Vacant"]
+        searchbar.selectedScopeButtonIndex = 0
+        searchbar.delegate = self
+    }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredApartments = vacantApartments
+            self.tableView.reloadData()
+        }else {
+            filterTableView(ind: searchBar.selectedScopeButtonIndex, text: searchText)
+        }
+    }
+    
+    func filterTableView(ind:Int,text:String) {
+        
+        switch ind {
+        case 0:
+            //fix of not searching when backspacing
+            filteredApartments = vacantApartments?.filter({ (mod) -> Bool in
+                print(mod.isRented!)
+                return ((mod.propertyAddress?.addressLine1?.lowercased().contains(text.lowercased()))! && mod.isRented! == true)
+                
+            })
+            self.tableView.reloadData()
+        case 1:
+            //fix of not searching when backspacing
+            filteredApartments = vacantApartments?.filter({ (mod) -> Bool in
+                return ((mod.propertyAddress?.addressLine1?.lowercased().contains(text.lowercased()))! && mod.isRented! == false)
+                
+            })
+            self.tableView.reloadData()
+        default:
+            print("no type")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "backToPropertyManagerHome" {
+            let controller = segue.destination as! PropertyManagerHomeViewController
+            controller.propManagerUserName = self.propManagerUserName
+        }
     }
     
     func getAllApartments(){
@@ -32,7 +82,7 @@ class PropertyManagerViewController: UIViewController {
         var apartment : Apartment?
         
         ref = Database.database().reference().child("apartments")
-        ref?.queryOrdered(byChild: "propManagerUserName").queryEqual(toValue: self.propManagerUserName).observe(.childAdded, with: { (snapshot) in
+        ref?.queryOrdered(byChild: "propertyManagerUserName").queryEqual(toValue: self.propManagerUserName).observe(.childAdded, with: { (snapshot) in
             if(!snapshot.hasChildren()){
                 print("No apartments available")
             }
@@ -42,7 +92,14 @@ class PropertyManagerViewController: UIViewController {
             apartment = Apartment()
             apartment?.apartmentId = Int64(snapshot.key)
             apartment?.rent = values!["rent"] as? Double
-            apartment?.isRented = values!["isRented"] as? Bool
+            let isRentedStr = (values!["isRented"])! as? String
+            if isRentedStr == "true"{
+                 apartment?.isRented = true
+            }else{
+                 apartment?.isRented = false
+            }
+           
+            print((values!["isRented"])!)
             apartment?.leaseSigned = values!["leaseSigned"] as? Bool
             apartment?.numberOfBeds = values!["numberOfBeds"] as? Double
             apartment?.numberOfBaths = values!["numberOfBaths"] as? Double
@@ -114,7 +171,7 @@ extension PropertyManagerViewController : UITableViewDataSource {
                             
                             DispatchQueue.global().async {
                                 cell.imageView?.contentMode = .scaleAspectFill
-                               // cell.setupCell(image: image)
+                                cell.setupCell(image: image)
                                 
                                 //self.tableView.reloadData()
                             }
@@ -132,7 +189,7 @@ extension PropertyManagerViewController : UITableViewDataSource {
             getImageFromUrl.resume()
         }
         cell.propertyLabel.text = apartment.propertyAddress?.addressLine1
-       // cell.rentLabel.text = String(describing: "$\(apartment.rent!)")
+        cell.rentLabel.text = String(describing: "$\(apartment.rent!)")
         cell.propertyLabel.layer.shadowColor = UIColor.black.cgColor
         cell.propertyLabel.layer.shadowOffset = CGSize(width:0, height:0)
         cell.propertyLabel.layer.shadowRadius = 6
@@ -145,9 +202,12 @@ extension PropertyManagerViewController : UITableViewDataSource {
 
 class PropertyManagerDataSourceCell: UITableViewCell{
     
+    @IBOutlet weak var rentLabel: UILabel!
     @IBOutlet weak var propertyImageView: UIImageView!
     @IBOutlet weak var propertyLabel: UILabel!
-    
+    func setupCell(image: UIImage?) {
+        self.propertyImageView.image = image
+    }
     
 //    var strarray = strArray {
 //        didSet{
