@@ -1,1 +1,3 @@
-# PropertyManagerSwift_2.0
+# PropertyManagerSwift
+
+Demo to the application : https://drive.google.com/file/d/1oQWqrX9UF4tt0uHaNdJqLjQDP-DfgZhw/view?usp=sharing
